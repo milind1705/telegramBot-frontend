@@ -58,9 +58,15 @@
   dependencies:
     "glob" "7.1.7"
 
+<<<<<<< HEAD
 "@next/swc-darwin-x64@12.2.0":
   "integrity" "sha512-iwMNFsrAPjfedjKDv9AXPAV16PWIomP3qw/FfPaxkDVRbUls7BNdofBLzkQmqxqWh93WrawLwaqyXpJuAaiwJA=="
   "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.2.0.tgz"
+=======
+"@next/swc-win32-x64-msvc@12.2.0":
+  "integrity" "sha512-OI14ozFLThEV3ey6jE47zrzSTV/6eIMsvbwozo+XfdWqOPwQ7X00YkRx4GVMKMC0rM44oGS2gmwMKYpe4EblnA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.2.0.tgz"
+>>>>>>> 00f4d065c14566f3ad956774caf08700b222c6a6
   "version" "12.2.0"
 
 "@nodelib/fs.scandir@2.1.5":
