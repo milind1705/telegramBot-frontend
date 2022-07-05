@@ -14,7 +14,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Burger . <span className="font-bold">$4.99</span>{" "}
+              Burger . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -26,7 +26,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Fries . <span className="font-bold" >$4.99</span>{" "}
+              Fries . <span className="font-bold" >₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -38,7 +38,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Hotdog . <span className="font-bold">$4.99</span>{" "}
+              Hotdog . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -50,7 +50,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Kebab . <span className="font-bold">$4.99</span>{" "}
+              Kebab . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -62,7 +62,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Pizza . <span className="font-bold">$4.99</span>{" "}
+              Pizza . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -74,7 +74,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Donuts . <span className="font-bold">$4.99</span>{" "}
+              Donuts . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -86,7 +86,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Popcorn . <span className="font-bold">$4.99</span>{" "}
+              Popcorn . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -98,7 +98,7 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Coke . <span className="font-bold">$4.99</span>{" "}
+              Coke . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
@@ -110,12 +110,10 @@ export default function Cards() {
               height={96}
             />
             <p className="text-base ">
-              Icecream . <span className="font-bold">$4.99</span>{" "}
+              Icecream . <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          
-         
         </div>
       </div>{" "}
     </>
