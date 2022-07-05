@@ -9,8 +9,8 @@ import Pay from '../packages/comps/Pay-section'
 export default function Home() {
   return (
     <>
-    <Pay/>
-{/* <Cards></Cards>  */}
+    {/* <Pay/> */}
+<Cards></Cards> 
  </>
   )
 }
