@@ -6,7 +6,7 @@ export default function Cards() {
       <div className="text-3xl bg-orange">Food Menu</div>
       <div className="max-w-5xl min-w-full mx-3">
         <div className="grid grid-cols-3 gap-2">
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/burger.png"
               alt="product Image"
@@ -18,7 +18,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/fries.png"
               alt="product Image"
@@ -30,7 +30,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/hot_dog.png"
               alt="product Image"
@@ -42,7 +42,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/Kebab.png"
               alt="product Image"
@@ -54,7 +54,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/pizza.png"
               alt="product Image"
@@ -66,7 +66,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/donuts.png"
               alt="product Image"
@@ -78,7 +78,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/popcorn.png"
               alt="product Image"
@@ -90,7 +90,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/coca.png"
               alt="product Image"
@@ -102,7 +102,7 @@ export default function Cards() {
             </p>
             <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/icecream.png"
               alt="product Image"
