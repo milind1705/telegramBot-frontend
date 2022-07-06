@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Cards() {
   return (
     <>
-      <div className="text-3xl bg-orange">Food Menu</div>
+      <div className="text-3xl">Food Menu</div>
       <div className="max-w-5xl min-w-full mx-3">
         <div className="grid grid-cols-3 gap-2">
           <div className="py-2">
