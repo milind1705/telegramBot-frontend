@@ -9,6 +9,7 @@ export default function Cards() {
     setNoOfItems(1)
     console.log(noOfItems)
   }
+  
   useEffect(()=>{
     if(noOfItems !== 0 ){
       setShowAddButton(false)
@@ -17,6 +18,7 @@ export default function Cards() {
       setShowAddButton(true)
     }
   }, [noOfItems])
+
   return (
     <>
       <div className="text-3xl bg-orange">main</div>
@@ -33,7 +35,7 @@ export default function Cards() {
               height={80}
             />
             <p className="mb-1 text-base ">
-              Burger . <span className="font-bold">$4.99</span>{" "}
+              Burger . <span className="font-bold" >${noOfItems === 0 ? 5 : noOfItems * 5}</span>{" "}
             </p>
             <div>
               {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" onClick={clickAddButton}>ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems}/>  } 
