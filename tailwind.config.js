@@ -14,11 +14,13 @@ module.exports = {
       black: "#000000",
       white: "#ffffff",
     skyblue:"#E5F0F9",
-    yellow:"#f59e0b",
+    orange:"#EF7E2B",
+   
     // gray:"#adb5bd",
    green:"#32cd32",
    gray:"#C0C0C0",
-   lightgray:"#f5f5f5"
+   lightgray:"#f5f5f5",
+   red:"#fc0324"
      
     },
   },

@@ -1,119 +1,145 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
+import Button from "./Button";
+const items = [
+      {
+        id:1,
+        name: 'Burger',
+        price: 150,
+        quantity:0,
+        image:
+          '/Images/burger.jpeg',
+
+        },
+      {
+        id:2,
+        name: 'Hotdog',
+        price: 100,
+        quantity:0,
+        image:
+          '/Images/hot_dog.png',
+
+        },
+      {
+        id:3,
+        name: 'Fries',
+        price: 60,
+        quantity:0,
+        image:
+          '/Images/fries.png',
+  
+        },
+      {
+        id:4,
+        name: 'kebab',
+        price: 250,
+        quantity:0,
+        image:
+          '/Images/kebab.png',
+  
+        },
+      {
+        id:5,
+        name: 'Pizza',
+        price: 350,
+        quantity:0,
+        image:
+          '/Images/pizza.png',
+  
+        },
+      {
+        id:6,
+        name: 'Donuts',
+        price: 50,
+        quantity:0,
+        image:
+          '/Images/donuts.png',
+ 
+        },
+      {
+        id:7,
+        name: 'Popcorn',
+        price: 120,
+        quantity:0,
+        image:
+          '/Images/popcorn.png',
+
+        },
+      {
+        id:8,
+        name: 'coca',
+        price: 60,
+        quantity:0,
+        image:
+          '/Images/coca.png',
+   
+        },
+      {
+        id:9,
+        name: 'Icecream',
+        price: 90,
+        quantity:0,
+        image:
+          '/Images/icecream.png',
+
+      },
+    ]
 export default function Cards() {
+  const [showAddButton, setShowAddButton]= useState(true)
+  const [selectedItem, setSelectedItem] = useState({})
+  const [noOfItems, setNoOfItems] =useState(0)
+
+  // useEffect(()=>{
+    
+  // },[])
+  const clickAddButton = (id)=>{
+    setSelectedItem(items[id-1])
+    // setNoOfItems(1)
+  }
+  console.log(selectedItem)
+  
+  useEffect(()=>{
+    if(noOfItems !== 0 ){
+      setShowAddButton(false)
+    }
+    if(noOfItems === 0 ){
+      setShowAddButton(true)
+    }
+  }, [noOfItems])
+
   return (
     <>
-      {/* <div className="text-3xl">Food Menu</div> */}
-      <div className="max-w-5xl min-w-full ">
-        <div className="grid grid-cols-3 gap-4 mx-2">
-          <div className="py-2">
+      {/* <div className="text-3xl bg-orange">main</div> */}
+      <div className="max-w-5xl m-auto mx-5 min-w-5xl">
+        <div className="grid grid-cols-3 gap-2">
+          {items.map((item) =>{
+            return(
+              <div key={item.id} className="w-32 px-2 ">
+            {showAddButton ? null : <div 
+           className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">{item.quantity}</div>}
+          
             <Image
-              src="/Images/burger.png"
+              src={item.image}
               alt="product Image"
-              width={96}
-              height={96}
+              width={80}
+              height={80}
             />
-            <p className="pb-2 text-sm">
-              Burger. <span className="font-bold">₹4.99</span>{" "}
+            <p className="mb-1 text-base ">
+              {item.name}.<span className="font-bold" >₹{noOfItems === 0 ? item.price : noOfItems * item.price}</span>{" "}
             </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
+            <div>
+              {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" 
+              onClick={()=>{
+                setSelectedItem(items[id])
+              }}>ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems}/>  } 
+            </div>
           </div>
-          <div className="py-2">
-            <Image
-              src="/Images/fries.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Fries . <span className="font-bold" >₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/hot_dog.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Hotdog. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/Kebab.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Kebab. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/pizza.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Pizza. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/donuts.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Donuts. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/popcorn.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Popcorn . <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/coca.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Coke. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-          <div className="py-2">
-            <Image
-              src="/Images/icecream.png"
-              alt="product Image"
-              width={96}
-              height={96}
-            />
-            <p className="pb-2 text-sm">
-              Icecream. <span className="font-bold">₹4.99</span>{" "}
-            </p>
-            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
+            )
+          })}
+          
+        </div>
+        <div className="py-2 pt-8">
+        <button type="button" className=" w-full max-w-3xl focus:outline-none text-white bg-green  focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">VIEW ORDER</button>
         </div>
       </div>{" "}
     </>
