@@ -62,21 +62,21 @@ const people = [
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-lightgray bg-white">
-                  {people.map((person) => (
-                    <tr key={person.type}>
+                  {people.map((food) => (
+                    <tr key={food.type}>
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm ">
                         <div className="flex items-center">
                           <div className="h-10 w-10 flex-shrink-0">
-                            <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
+                            <img className="h-10 w-10 rounded-full" src={food.image} alt="" />
                           </div>
                           <div className="ml-4">
-                            <div className="font-semibold">{person.name}</div>
-                            <div className="text-gray">{person.type}</div>
+                            <div className="font-semibold">{food.name}</div>
+                            <div className="text-gray">{food.type}</div>
                           </div>
                         </div>
                       </td>
                       <td className="whitespace-nowrap px-8 py-4 text-sm text-gray-500  ">
-                        <div className="text-gray-900 text-right">{person.price}</div>
+                        <div className="text-gray-900 text-right">{food.price}</div>
                        
                       </td>
                      
