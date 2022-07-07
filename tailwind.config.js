@@ -15,10 +15,12 @@ module.exports = {
       white: "#ffffff",
     skyblue:"#E5F0F9",
     orange:"#EF7E2B",
+   
     // gray:"#adb5bd",
    green:"#32cd32",
    gray:"#C0C0C0",
-   lightgray:"#f5f5f5"
+   lightgray:"#f5f5f5",
+   red:"#fc0324"
      
     },
   },
