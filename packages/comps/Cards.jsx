@@ -1,32 +1,42 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import Button from "./Button";
 
 export default function Cards() {
   const [showAddButton, setShowAddButton]= useState(true)
+  const [noOfItems, setNoOfItems] =useState(0)
+  const clickAddButton = ()=>{
+    setNoOfItems(1)
+  }
+  useEffect(()=>{
+    if(noOfItems != 0 ){
+      setShowAddButton(false)
+    }
+  }, [noOfItems])
   return (
     <>
-   
       <div className="text-3xl bg-orange">main</div>
       <div className="max-w-5xl m-auto mx-5 min-w-5xl">
         <div className="grid grid-cols-3 gap-2">
-          <div className=" w-32 px-2">
-          <div className="bg-orange h-6 w-6 rounded-full text-white text-center ml-24 -mb-4 mt-2">1</div>
+          <div className="w-32 px-2 ">
+            {showAddButton ? null : <div 
+           className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">1</div>}
+          
             <Image
               src="/Images/burger.png"
               alt="product Image"
               width={80}
               height={80}
             />
-            <p className="text-base mb-1 ">
+            <p className="mb-1 text-base ">
               Burger . <span className="font-bold">$4.99</span>{" "}
             </p>
             <div>
-             <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange">ADD</button>
-            <Button/></div>
+              {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" onClick={clickAddButton}>ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems}/>  } 
+            </div>
           </div>
           <div>
-          <div className="bg-orange h-6 w-6 rounded-full text-white text-center ml-24 -mb-4 mt-2">1</div>
+          <div className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">1</div>
             <Image
               src="/Images/fries.png"
               alt="product Image"
