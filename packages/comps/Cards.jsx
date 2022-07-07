@@ -33,97 +33,95 @@ export default function Cards() {
               width={80}
               height={80}
             />
-            <p className="text-base ">
-              Fries . <span className="font-bold" >$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Fries . <span className="font-bold" >₹4.99</span>{" "}
             </p>
             <button className="px-8 py-1.5 text-lg font-semibold text-white rounded-xl bg-orange">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/hot_dog.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-base ">
-              Hotdog . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Hotdog. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-xl font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/Kebab.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-lg ">
-              Kebab . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Kebab. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-xl font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/pizza.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-lg ">
-              Pizza . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Pizza. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-xl font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/donuts.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-lg ">
-              Donuts . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Donuts. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-xl font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/popcorn.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-base ">
-              Popcorn . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Popcorn . <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/coca.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-base ">
-              Coke . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Coke. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          <div>
+          <div className="py-2">
             <Image
               src="/Images/icecream.png"
               alt="product Image"
-              width={100}
-              height={120}
+              width={96}
+              height={96}
             />
-            <p className="text-base ">
-              Icecream . <span className="font-bold">$4.99</span>{" "}
+            <p className="pb-2 text-sm">
+              Icecream. <span className="font-bold">₹4.99</span>{" "}
             </p>
-            <button className="px-8 py-2 text-lg font-bold text-white rounded-xl bg-orange">ADD</button>
+            <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
           </div>
-          
-         
         </div>
       </div>{" "}
     </>
