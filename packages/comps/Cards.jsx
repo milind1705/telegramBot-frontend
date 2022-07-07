@@ -1,7 +1,62 @@
 import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import Button from "./Button";
-
+const items = [
+      {
+        name: 'Burger',
+        price: 150,
+        image:
+          '/Images/burger.jpeg',
+      },
+      {
+        name: 'Hotdog',
+        price: 100,
+        image:
+          '/Images/hot_dog.png',
+      },
+      {
+        name: 'Fries',
+        price: 60,
+        image:
+          '/Images/fries.png',
+      },
+      {
+        name: 'kebab',
+        price: 250,
+        image:
+          '/Images/Kebab.png',
+      },
+      {
+        name: 'Pizza',
+        price: 350,
+        image:
+          '/Images/pizza.png',
+      },
+      {
+        name: 'Donuts',
+        price: 50,
+        image:
+          '/Images/donuts.png',
+      },
+      {
+        name: 'Popcorn',
+        price: 120,
+        image:
+          '/Images/popcorn.png',
+      },
+      {
+        name: 'coca',
+        price: 60,
+        image:
+          '/Images/coca.png',
+      },
+      {
+        name: 'Icecream',
+        price: 90,
+        image:
+          '/Images/icecream.png',
+      },
+    ]
 export default function Cards() {
   const [showAddButton, setShowAddButton]= useState(true)
   const [noOfItems, setNoOfItems] =useState(0)
@@ -24,24 +79,36 @@ export default function Cards() {
       <div className="text-3xl bg-orange">main</div>
       <div className="max-w-5xl m-auto mx-5 min-w-5xl">
         <div className="grid grid-cols-3 gap-2">
-          <div className="w-32 px-2 ">
+          {items.map((item) =>{
+            return(
+              <div key={item.type} className="w-32 px-2 ">
             {showAddButton ? null : <div 
            className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">{noOfItems}</div>}
           
             <Image
-              src="/Images/burger.png"
+              src={item.image}
               alt="product Image"
               width={80}
               height={80}
             />
             <p className="mb-1 text-base ">
-              Burger . <span className="font-bold" >${noOfItems === 0 ? 5 : noOfItems * 5}</span>{" "}
+              {item.name}.<span className="font-bold" >₹{noOfItems === 0 ? item.price : noOfItems * item.price}</span>{" "}
             </p>
             <div>
               {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" onClick={clickAddButton}>ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems}/>  } 
             </div>
           </div>
-          <div>
+            )
+          })}
+          
+        </div>
+      </div>{" "}
+    </>
+  );
+}
+
+
+{/* <div>
           <div className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">1</div>
             <Image
               src="/Images/fries.png"
@@ -137,9 +204,4 @@ export default function Cards() {
               Icecream. <span className="font-bold">₹4.99</span>{" "}
             </p>
             <button className="px-8 py-1 text-lg font-bold text-white rounded-xl bg-yellow">ADD</button>
-          </div>
-        </div>
-      </div>{" "}
-    </>
-  );
-}
+          </div> */}
