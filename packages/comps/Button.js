@@ -3,7 +3,6 @@ import { MinusIcon, PlusIcon } from '@heroicons/react/solid'
 import {useState} from "react"
 
 export default function Button({noOfItems, setNoOfItems}) {
-  // const [noOfItems, setNoOfItems] =useState(0)
   const decreamentItem = () =>{
     if(noOfItems > 0 ){
       setNoOfItems(noOfItems - 1)
@@ -16,7 +15,6 @@ export default function Button({noOfItems, setNoOfItems}) {
   const increamentItem = () =>{
     setNoOfItems(noOfItems + 1)
   }
-  console.log(noOfItems)
   return (
     <span className="relative z-0 inline-flex gap-2 shadow-sm">
       <button

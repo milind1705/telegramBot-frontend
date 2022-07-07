@@ -7,10 +7,14 @@ export default function Cards() {
   const [noOfItems, setNoOfItems] =useState(0)
   const clickAddButton = ()=>{
     setNoOfItems(1)
+    console.log(noOfItems)
   }
   useEffect(()=>{
-    if(noOfItems != 0 ){
+    if(noOfItems !== 0 ){
       setShowAddButton(false)
+    }
+    if(noOfItems === 0 ){
+      setShowAddButton(true)
     }
   }, [noOfItems])
   return (
@@ -20,7 +24,7 @@ export default function Cards() {
         <div className="grid grid-cols-3 gap-2">
           <div className="w-32 px-2 ">
             {showAddButton ? null : <div 
-           className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">1</div>}
+           className="w-6 h-6 mt-2 ml-20 -mb-4 text-center text-white rounded-full bg-orange">{noOfItems}</div>}
           
             <Image
               src="/Images/burger.png"
