@@ -15,6 +15,11 @@ export default function Cards({food, onAdd, onRemove}) {
       setShowAddButton(true)
     }
   }, [noOfItems])
+
+  const handelClick = ()=>{
+    setNoOfItems(1)
+    onAdd(food)
+  }
   return (
     <>
       <div className="max-w-5xl m-auto mx-5 min-w-5xl">
@@ -35,7 +40,7 @@ export default function Cards({food, onAdd, onRemove}) {
             </p>
             <div>
               {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" 
-             onClick={ onAdd(food) }
+             onClick={handelClick}
              >ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems} onAdd = {onAdd} onRemove={onRemove} food={food}/>  } 
             </div>
           </div>
