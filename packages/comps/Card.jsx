@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import Button from "./Button";
 
-export default function Cards({food}) {
+export default function Cards({food, onAdd, onRemove}) {
     const [showAddButton, setShowAddButton]= useState(true)
   const [noOfItems, setNoOfItems] =useState(0)
   const { name, price, image} = food
@@ -35,8 +35,8 @@ export default function Cards({food}) {
             </p>
             <div>
               {showAddButton ? <button className="px-7 py-1.5 text-lg font-base text-white rounded-xl bg-orange" 
-             onClick={()=>setNoOfItems(1)}
-             >ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems}/>  } 
+             onClick={ onAdd(food) }
+             >ADD</button> : <Button noOfItems ={noOfItems} setNoOfItems = {setNoOfItems} onAdd = {onAdd} onRemove={onRemove} food={food}/>  } 
             </div>
           </div>
             
