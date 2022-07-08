@@ -43,7 +43,7 @@ export default function Home() {
           showCheckout ? "hidden" : ""
         }`}
       >
-        <h1 className="flex justify-center py-4 text-3xl font-bold">Food King</h1>
+        <h1 className="flex justify-center py-4 text-3xl font-bold text-orange">Food King</h1>
         <Cart cartItems={cartItems} />
         <div className="grid grid-cols-3 gap-2">
           {foods.map((food) => {

@@ -17,9 +17,14 @@ export default function Pay({ cartItems, setShowCheckout }) {
                     </th>
                     <th
                       scope="col"
-                      className="px-8 py-3.5 text-right text-sm  pt-6 font-normal text-green" onClick={()=>setShowCheckout(false)}
+                      className="px-8 py-3.5 text-right text-sm  pt-6 " onClick={()=>setShowCheckout(false)}
                     >
-                      Edit
+                     <button
+        type="button"
+        className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-sm font-medium  shadow-sm text-green "
+      >
+         Edit
+      </button>
                     </th>
                   </tr>
                 </thead>

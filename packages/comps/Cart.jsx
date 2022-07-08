@@ -7,7 +7,7 @@ return(
    <div className="flex flex-row gap-8 py-2">
     {cartItems.length === 0 ? "No Items in Cart" : ""} <br /><span>Total Price :₹ {totalPrice}</span>
   
-    <button className="px-6 py-1 rounded-md bg-green">{cartItems.length === 0 ? "Order" : "Checkout"}</button>
+    <button className="px-6 py-1 rounded-md bg-green text-white">{cartItems.length === 0 ? "Order" : "Checkout"}</button>
    </div>
 )
 }
